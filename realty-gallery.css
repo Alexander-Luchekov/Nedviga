@@ -1,0 +1,81 @@
+#realty-gallery-preview li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.6s ease;
+    transition: -webkit-transform 0.6s ease;
+    transition: transform 0.6s ease;
+    transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+.carousel-item.active,
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+    display: block;
+}
+.carousel-item-next,
+.carousel-item-prev {
+    position: absolute;
+    top: 0;
+}
+.carousel-item-next.carousel-item-left,
+.active.carousel-item-right {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.carousel-item-prev.carousel-item-right,
+.active.carousel-item-left {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.15s ease;
+    transition: opacity 0.15s ease;
+}
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+}
+.carousel-control-prev {
+    left: -20px;
+}
+.carousel-control-next {
+    right: -20px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 fill%3D%22%23fff%22 viewBox%3D%220%200%2024%2024%22%3E%3Cpath d%3D%22M15.4 21l-7-7 7-7%22%2F%3E%3C%2Fsvg%3E');
+}
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 fill%3D%22%23fff%22 viewBox%3D%220%200%2024%2024%22%3E%3Cpath d%3D%22M8.6 3l7 7-7 7%22%2F%3E%3C%2Fsvg%3E');
+}
